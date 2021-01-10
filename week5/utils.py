@@ -59,7 +59,7 @@ def question_to_vec(question, embeddings, dim):
 
     que_vec = [embeddings[w] for w in question.split() if w in embeddings]
     if not que_vec:
-      return np.zeros(dim)
+        return np.zeros(dim)
 
     return np.mean(que_vec, axis = 0)
 
